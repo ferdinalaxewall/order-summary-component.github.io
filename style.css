@@ -34,6 +34,7 @@ body{
     font-size: var(--fs-body);
     font-weight: var(--fw-medium);
     z-index: 2;
+    position: relative;
 }
 
 
@@ -197,6 +198,30 @@ body{
     color:  #000;
 }
 
+.footer{
+    position: absolute;
+    bottom: 15px;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    color: var(--clr-dark-blue);
+}
+
+.footer a{
+    text-decoration: underline;
+    color: var(--clr-desaturated-blue);
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.footer a:hover{
+    text-decoration: none;
+    opacity: 0.7;
+}
+
 @media (max-width:375px) {
 
     body{
@@ -237,5 +262,10 @@ body{
 
     .content-section .component-card .card-body .order-list .order-list-description{
         width: 60%;
+    }
+
+    .footer{
+        position: static;
+        padding: 15px 0;
     }
 }
