@@ -1,0 +1,241 @@
+:root{
+    --clr-primary-pale-blue:hsl(225, 100%, 94%);
+    --clr-primary-bright-blue:rgb(56, 41, 224);
+    --clr-very-pale-blue:hsl(225, 100%, 98%);
+    --clr-desaturated-blue:hsl(224, 23%, 55%);
+    --clr-dark-blue:hsl(223, 47%, 23%);
+    --font-family:'Red Hat Display', sans-serif;
+    --fs-body:16px;
+    --fw-xtra-bold:900;
+    --fw-bold:700;
+    --fw-medium:500;
+}
+
+*,*::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, a:hover, a:visited{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--clr-primary-pale-blue);
+    font-family: var(--font-family);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
+    z-index: 2;
+}
+
+
+.content-section{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content-section .pattern-background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.content-section .component-card{
+    position: absolute;
+    z-index: 3;
+    width: 450px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    background-color: var(--clr-very-pale-blue);
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.content-section .component-card .card-body{
+    padding: 30px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.content-section .component-card .card-body > *{
+    margin: 7.5px 0;
+}
+
+.content-section .component-card .card-body .card-title{
+    font-size: 26px;
+    font-weight: var(--fw-xtra-bold);
+    color: var(--clr-dark-blue);
+    margin-top: 0;
+}
+
+.content-section .component-card .card-body .card-description{
+    color: var(--clr-desaturated-blue);
+}
+
+.content-section .component-card .card-body .order-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--clr-very-pale-blue);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.content-section .component-card .card-body .order-list .order-list-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.content-section .component-card .card-body .order-list .order-list-action{
+    text-decoration: underline;
+    color: var(--clr-primary-bright-blue);
+    font-weight: var(--fw-bold);
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.content-section .component-card .card-body .order-list .order-list-action:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.content-section .component-card .card-body .order-list .order-list-description .order-list-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content-section .component-card .card-body .order-list .order-list-description .order-list-text .order-list-title{
+    font-weight: var(--fw-xtra-bold);
+    font-size: var(--fs-body);
+    color: var(--clr-dark-blue);
+    text-align: left;
+}
+
+.content-section .component-card .card-body .order-list .order-list-description .order-list-text .order-list-price{
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-body);
+    color: var(--clr-desaturated-blue);
+    text-align: left;
+}
+
+.content-section .component-card .card-body .card-button{
+    padding: 15px 0 ;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    color: var(--clr-desaturated-blue);
+    font-weight: var(--fw-bold);
+    font-family: var(--font-family);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    cursor: pointer;
+}
+
+.content-section .component-card .card-body .card-button#cta-button{
+    background-color: var(--clr-primary-bright-blue);
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(56, 41, 224, 0.4);
+}
+
+.content-section .component-card .card-body .card-button#cta-button:hover{
+    opacity: 0.8 ;
+}
+
+.content-section .component-card .card-body .card-button#secondary-button{
+    width: 40%;
+    padding: 7.5px 0;
+}
+
+.content-section .component-card .card-body .card-button#secondary-button:hover{
+    color:  #000;
+}
+
+@media (max-width:375px) {
+
+    body{
+        overflow: auto;
+    }
+
+    .content-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .content-section .pattern-background{
+        background-image: url("./images/pattern-background-mobile.svg");
+    }
+
+    .content-section .component-card{
+        position: relative;
+        width: 90vw;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+}
+
+    .content-section .component-card .card-body{
+        padding: 10px 20px;
+    }
+
+    .content-section .component-card .card-body .card-title{
+        margin-top: 10px;
+    }
+
+    .content-section .component-card .card-body .order-list .order-list-description{
+        width: 60%;
+    }
+}
